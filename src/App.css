@@ -1,0 +1,38 @@
+
+.navcont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px; */
+  border: 1px solid black;
+  box-shadow: 3px 2px 2px rgb(0 0 0);
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+}
+
+.navList {
+  list-style-type: none;
+  text-decoration: none;
+  /* list-style: none; */
+  margin-right: 8%;
+  display: flex;
+  gap: 20px;
+}
+
+.navList a {
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid black;
+  box-shadow: 3px 2px 2px rgb(0 0 0);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
