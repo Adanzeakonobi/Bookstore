@@ -1,33 +1,13 @@
-.display {
-  background-color: grey;
-  color: white;
-  text-align: end;
-  padding: 15px;
-}
+display: flex;
+    justify-content: center;
+    gap: 150px;
 
-.operators {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
 
-.digis {
-  display: flex;
-}
-
-.calc-btn,
-.calc-btn1,
-.calc-btn2 {
-  width: 157px;
-  padding: 40px;
-  background-color: #e0e0e0;
-  margin: 1px;
-  text-align: center;
-  font-size: 25px;
-}
-
-.orange-btn {
-  display: flex;
-  flex-direction: column;
-  width: 155px;
-  text-align: center;
-}
+    listBooks {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding: 10px;
+      /* border: 2px solid rgb(57, 57, 57);

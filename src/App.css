@@ -1,3 +1,6 @@
+* {
+  padding: 0;
+}
 
 .navcont {
   display: flex;
@@ -22,6 +25,51 @@
 
 .navList a {
   text-decoration: none;
+}
+
+.listBooks {
+  display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-top: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.list-item {
+  border: 2px solid rgb(57, 57, 57);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+.list-item:nth-child(even) {
+  background-color: rgb(206, 206, 206);
+}
+
+.list-item:nth-child(odd) {
+  background-color: rgb(235, 235, 235);
+}
+
+h2 {
+  padding: 5px;
+  border: 1px solid rgb(57, 57, 57);
+}
+
+h3 {
+  padding: 5px;
+}
+
+.add-form {
+  display: flex;
+  gap: 150px;
+  margin-top: 15px;
+  align-items: flex-start;
+  padding: 12px;
+  border: 1px solid;
 }
 
 .footer {

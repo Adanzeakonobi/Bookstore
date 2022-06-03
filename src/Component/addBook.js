@@ -2,8 +2,8 @@ import React from 'react';
 
 const BookAdd = () => (
   <div>
-    <h2>Register new books</h2>
-    <form className="register-form">
+    <h3>Register new books</h3>
+    <form className="add-form">
       <input type="text" name="title" placeholder="Book title.." />
       <input type="text" name="author" placeholder="Author.." />
       <button type="submit">Add Book</button>

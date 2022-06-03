@@ -5,7 +5,7 @@ import Navbar from './Component/navibar';
 import Pagecategory from './pages/PageCatego';
 import BooksPage from './pages/PageBook';
 import NoMatch from './pages/nomatch';
-import Footer from './Component/footer';
+// import Footer from './Component/footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class App extends React.Component {
           <Route path="/Bookstore/PageCatego" element={<Pagecategory />} />
           <Route path="/Bookstore/nomatch" element={<NoMatch />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }

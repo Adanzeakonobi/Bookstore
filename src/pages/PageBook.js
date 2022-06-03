@@ -4,7 +4,7 @@ import BookAdd from '../Component/addBook';
 
 const BooksPage = () => (
   <div>
-    <h2>BooksPage</h2>
+    {/* <h2>Books Page</h2> */}
     <BooksList />
     <BookAdd />
   </div>
