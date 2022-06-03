@@ -1,13 +1,3 @@
-display: flex;
-    justify-content: center;
-    gap: 150px;
-
-
-    listBooks {
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      gap: 15px;
-      margin-bottom: 20px;
-      padding: 10px;
-      /* border: 2px solid rgb(57, 57, 57);
+.listbooks {
+  display: flex;
+}
