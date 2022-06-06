@@ -1,13 +1,11 @@
-// Actions
-const STATUS_CHECK = 'STATUS_CHECK';
+const STATUS_CHECK = 'bookstore/books/STATUS_CHECK';
 
-// Action Creators
+const initialState = [];
+
 export const statusCheck = () => ({ type: STATUS_CHECK });
 
-// Reducer
-const categories = (state = [], action) => {
+const categories = (state = initialState, action) => {
   switch (action.type) {
-    // do reducer stuff
     case STATUS_CHECK:
       return 'Under construction';
     default: return state;
