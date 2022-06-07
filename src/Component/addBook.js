@@ -30,19 +30,16 @@ const BookAdd = () => {
     dispatch(addBook(newBookObj));
   };
 
-
-return (
-  <div>
-    <h3>Register new books</h3>
-    <form className="add-form" onSubmit={addEventBookHandler}>
-      <input type="text" name="title" placeholder="Book title.." onChange={changeTitle}/>
-      <input type="text" name="author" placeholder="Author.." onChange={changeAuthor} />
-      <button type="submit">Add Book</button>
-    </form>
-  </div>
-);
-}
-
-
+  return (
+    <div>
+      <h3>Register new books</h3>
+      <form className="add-form" onSubmit={addEventBookHandler}>
+        <input type="text" name="title" placeholder="Book title.." onChange={changeTitle} />
+        <input type="text" name="author" placeholder="Author.." onChange={changeAuthor} />
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
+  );
+};
 
 export default BookAdd;
