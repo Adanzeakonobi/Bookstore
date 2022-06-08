@@ -1,4 +1,4 @@
-const STATUS_CHECK = 'bookstore/books/STATUS_CHECK';
+const STATUS_CHECK = 'bookstore/pageCatego/STATUS_CHECK';
 
 const initialState = [];
 
