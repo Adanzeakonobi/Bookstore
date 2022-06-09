@@ -5,28 +5,28 @@ import { addNewBook } from '../redux/books/books';
 
 const BookAdd = () => {
   const dispatch = useDispatch();
-  const [book, changeBook] = useState({ title: '', author: '' });
+  const [book, changeBook] = useState({ item_id: '', title: '', author: '' });
 
-  const changeTitle = (e) => {
+  const updateTitle = (e) => {
     changeBook({
       ...book,
       title: e.target.value,
     });
   };
 
-  const changeAuthor = (e) => {
+  const updateAuthor = (e) => {
     changeBook({
       ...book,
       author: e.target.value,
     });
   };
 
-  const changeCategory = (e) => {
-    changeBook({
-      ...book,
-      Category: e.target.value,
-    });
-  };
+  // const changeCategory = (e) => {
+  //   changeBook({
+  //     ...book,
+  //     Category: e.target.value,
+  //   });
+  // };
 
   const addEventBookHandler = (e) => {
     e.preventDefault();
@@ -36,11 +36,7 @@ const BookAdd = () => {
       title: title.value,
       author: author.value,
       category: category.value,
-    }
-    // const newBookObj = {
-    //   title: title.value,
-    //   author: author.value,
-    // };
+    };
     dispatch(addNewBook(newBook));
     title.value = '';
     author.value = '';
@@ -51,9 +47,9 @@ const BookAdd = () => {
     <div>
       <h3>Register new books</h3>
       <form className="add-form" onSubmit={addEventBookHandler}>
-        <input type="text" name="title" placeholder="Book title.." onChange={changeTitle} required />
-        <input type="text" name="author" placeholder="Author.." onChange={changeAuthor} required />
-        <input type="text" name="Category" placeholder="Category.." onChange={changeCategory} required />
+        <input type="text" name="title" placeholder="Book title.." onChange={updateTitle} required />
+        <input type="text" name="author" placeholder="Author.." onChange={updateAuthor} required />
+        <input type="text" name="Category" placeholder="Category.." onChange={updateAuthor} required />
         <button type="submit">Add Book</button>
       </form>
     </div>

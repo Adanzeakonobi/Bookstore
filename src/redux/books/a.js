@@ -1,10 +1,11 @@
-import { object } from 'prop-types';
+/* eslint-disable camelcase */
+// import { object } from 'prop-types';
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BbK8z59qXzWwp214YswA/books';
+// const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BbK8z59qXzWwp214YswA/books';
 
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
-
+const GET_BOOKS = 'bookStore/books/GET_BOOKS';
 const GET_BOOK_SUCCESS = 'bookStore/books/GET_BOOK_SUCCESS';
 const GET_BOOK_LOADING = 'bookStore/books/GET_BOOK_LOADING';
 const GET_BOOK_FAILURE = 'bookStore/books/GET_BOOK_FAILURE';
@@ -21,41 +22,42 @@ export const getBookSuccess = (books) => ({ type: GET_BOOK_SUCCESS, payload: boo
 export const getBookLoading = () => ({ type: GET_BOOK_LOADING });
 export const getBookFailure = (errMessage) => ({ type: GET_BOOK_FAILURE, payload: errMessage });
 
-export const addNewBook = (newBook) => (dispatch) => {
-  fetch(url, {
+export const addNewBook = (payload) => async (dispatch) => (
+  fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BbK8z59qXzWwp214YswA/books', {
     method: 'POST',
-    headers: { 'content-Type': 'Application/json' },
-    body: JSON.stringify(newBook),
-  }).then(() => {
-    dispatch(addBook(newBook));
-  });
-};
-
-export const getBook = () => (dispatch) => {
-  dispatch(getBookLoading());
-  fetch(url)
-    .then((response) => response.json())
+    body: JSON.stringify(payload),
+    headers: {
+      'Content-type': 'application/json; Charset=UTF-8',
+    },
+  })
+    .then((response) => response.ok)
     .then((data) => {
-      const clearedBook = [];
-      object.keys(data).forEach((key) => {
-        if (key) {
-          clearedBook.push({ ...data[key][0], item_id: key });
-        }
-      });
-      dispatch(getBookSuccess(clearedBook));
+      if (data) {
+        dispatch({ type: ADD_BOOK, payload });
+      }
     })
-    .catch((err) => {
-      dispatch(getBookFailure(err.Message));
-    });
-};
+);
 
-export const deleteBook = (id) => (dispatch) => {
-  fetch(`${url}/${id}`, {
+export const deleteBook = (id) => async (dispatch) => (
+  fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BbK8z59qXzWwp214YswA/books/${id}`, {
     method: 'DELETE',
-  }).then(() => {
-    dispatch(getBook());
-  });
-};
+  })
+    .then((response) => response.text())
+    .then(dispatch({ type: REMOVE_BOOK, id }))
+);
+
+export const getBook = () => async (dispatch) => (
+  fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/BbK8z59qXzWwp214YswA/books')
+    .then((response) => response.json())
+    .then((payload) => {
+      const obj = Object.entries(payload);
+      const books = obj.map(([item_id, value]) => {
+        const [book] = value;
+        return { ...book, item_id };
+      });
+      dispatch({ type: GET_BOOKS, books });
+    })
+);
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
