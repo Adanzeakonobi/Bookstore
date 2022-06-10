@@ -27,46 +27,17 @@ Additional description about the project and its features.
 
 ## Getting Started
 
-**This are steps on how to install the react app.**
+### Setup
 
+#### To get a local copy up and running follow these simple example steps.
 
-
-To get a local copy up and running follow these simple example steps.
-
-### `clone repository on your local device`
-
-copy this link to get HTTP url to clone Into your device `https://github.com/Adanzeakonobi/Bookstore.git`
-
-
-### Prerequisites
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
+- Click on the `Code` button on the repo
+- In your local PC, open your terminal in the folder you would like to clone the project.
+- Clone the repo with the command: `git clone (copied link)`; like so: `git clone https://github.com/Adanzeakonobi/Bookstore.git`
+- On the terminal, navigate into the directory like so: `cd bookstore`
+- Checkout to branch name like so: `git checkout [branch name]`
+- Run `npm i` or `yarn` to install the dependencies
+- Run `npm start` or `yarn start` to start the application
 
 
 ## Author

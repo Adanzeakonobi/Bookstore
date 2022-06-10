@@ -7,8 +7,6 @@ const BooksPage = () => {
     marginTop: '2rem',
     marginBottom: '1.8rem',
     border: '1.5px solid var(--grey-border)',
-    marginLeft: '1.875rem',
-    marginRight: '1.875rem',
   };
 
   return (
