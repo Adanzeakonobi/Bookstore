@@ -1,3 +1,19 @@
+.list-item h3,
+.list-item p,
+.btn-container button,
+.currentChapterSection h3,
+.currentChapterSection h2 {
+  font-family: RobotoSlab, sans-serif;
+}
+
+.list-item p,
+.commentbtn,
+.removebtn,
+.currentChapterSection h3,
+.currentChapterSection h3 {
+  font-weight: 300;
+}
+
 .book-container {
   display: flex;
   justify-content: space-between;
@@ -15,7 +31,6 @@
 }
 
 .list-item h3 {
-  font-family: RobotoSlab, sans-serif;
   width: 15.313rem;
   color: var(--black-two);
   font-size: 1.375rem;
@@ -36,9 +51,7 @@
 .list-item p {
   height: 1.188rem;
   margin: 0.25rem 0 0;
-  font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
-  font-weight: 300;
   color: var(--cool-blue);
 }
 
@@ -48,7 +61,6 @@
 
 .btn-container button {
   background-color: transparent;
-  font-family: RobotoSlab, sans-serif;
   border: none;
   color: var(--cool-blue);
 }
@@ -58,7 +70,6 @@
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
   font-size: 0.875rem;
-  font-weight: 300;
 }
 
 .removebtn {
@@ -66,7 +77,6 @@
   height: 1.188rem;
   margin: 0.188rem 0.538rem 0.125rem 0;
   font-size: 0.875rem;
-  font-weight: 300;
 }
 
 .editbtn {
@@ -93,9 +103,7 @@
 
 .currentChapterSection h3 {
   margin: 0.438rem 0.813rem 0.25rem 0;
-  font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
-  font-weight: 300;
   letter-spacing: -0.4px;
   color: var(--black-two);
 }
@@ -103,9 +111,7 @@
 .currentChapterSection h2 {
   margin: 0.063rem 3.625rem 0 0;
   opacity: 0.5;
-  font-family: RobotoSlab, sans-serif;
   font-size: 0.813rem;
-  font-weight: 300;
   color: var(--black-two);
 }
 

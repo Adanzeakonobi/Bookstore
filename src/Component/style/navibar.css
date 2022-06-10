@@ -2,14 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* border: 1px solid black; */
-
-  /* box-shadow: 3px 2px 2px rgb(0 0 0); */
-
-  /* margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 10px; */
   padding: 1rem 4.188rem 1rem 4.25rem;
   height: 3.94rem;
   border-bottom: 1.5px solid gray;
