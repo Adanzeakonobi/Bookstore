@@ -21,13 +21,6 @@ const BookAdd = () => {
     });
   };
 
-  // const changeCategory = (e) => {
-  //   changeBook({
-  //     ...book,
-  //     Category: e.target.value,
-  //   });
-  // };
-
   const addEventBookHandler = (e) => {
     e.preventDefault();
     const { title, author, category } = e.target.elements;
@@ -47,9 +40,9 @@ const BookAdd = () => {
     <div>
       <h3>Register new books</h3>
       <form className="add-form" onSubmit={addEventBookHandler}>
-        <input type="text" name="title" placeholder="Book title.." onChange={updateTitle} required />
-        <input type="text" name="author" placeholder="Author.." onChange={updateAuthor} required />
-        <input type="text" name="Category" placeholder="Category.." onChange={updateAuthor} required />
+        <input type="text" id="title" name="title" placeholder="Book title.." onChange={updateTitle} required />
+        <input type="text" id="author" name="author" placeholder="Author.." onChange={updateAuthor} required />
+        <input type="text" id="category" name="Category" placeholder="Category.." onChange={updateAuthor} required />
         <button type="submit">Add Book</button>
       </form>
     </div>
