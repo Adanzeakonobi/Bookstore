@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { v4 as uuidv4 } from 'uuid';
+import { addNewBook } from '../redux/books/books';
 
 const BookAdd = () => {
   const dispatch = useDispatch();
-  const [book, changeBook] = useState({ title: '', author: '' });
+  const [book, changeBook] = useState({ item_id: '', title: '', author: '' });
 
-  const changeTitle = (e) => {
+  const updateTitle = (e) => {
     changeBook({
       ...book,
       title: e.target.value,
     });
   };
 
-  const changeAuthor = (e) => {
+  const updateAuthor = (e) => {
     changeBook({
       ...book,
       author: e.target.value,
@@ -22,20 +23,26 @@ const BookAdd = () => {
 
   const addEventBookHandler = (e) => {
     e.preventDefault();
-    const { title, author } = e.target.elements;
-    const newBookObj = {
+    const { title, author, category } = e.target.elements;
+    const newBook = {
+      item_id: uuidv4(),
       title: title.value,
       author: author.value,
+      category: category.value,
     };
-    dispatch(addBook(newBookObj));
+    dispatch(addNewBook(newBook));
+    title.value = '';
+    author.value = '';
+    category.value = '';
   };
 
   return (
     <div>
       <h3>Register new books</h3>
       <form className="add-form" onSubmit={addEventBookHandler}>
-        <input type="text" name="title" placeholder="Book title.." onChange={changeTitle} />
-        <input type="text" name="author" placeholder="Author.." onChange={changeAuthor} />
+        <input type="text" id="title" name="title" placeholder="Book title.." onChange={updateTitle} required />
+        <input type="text" id="author" name="author" placeholder="Author.." onChange={updateAuthor} required />
+        <input type="text" id="category" name="Category" placeholder="Category.." onChange={updateAuthor} required />
         <button type="submit">Add Book</button>
       </form>
     </div>
