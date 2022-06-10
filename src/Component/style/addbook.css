@@ -1,0 +1,48 @@
+.addingBook {
+    min-height: 30vh;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .addingBook h3 {
+    width: 24.875rem;
+    height: 1.5rem;
+    margin: 1.813rem 12.75rem 1.188rem 0;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.18px;
+    color: var(--warm-grey);
+  }
+
+  .add-form {
+    display: flex;
+    margin-top: 12px;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .add-form input,
+select {
+  padding: 0.813rem 0.813rem 0.813rem 1.063rem;
+  border-radius: 5px;
+  border: solid 1.5px var(--grey-border);
+  background-color: var(--white);
+}
+
+#title {
+  flex-grow: 1;
+}
+
+.add-form button {
+    border-radius: 3px;
+    padding: 0.813rem 0.813rem 0.814rem 1.043rem;
+    border: solid 1px var(--grey-border);
+    background-color: var(--azure);
+    color: var(--white);
+    cursor: pointer;
+  }

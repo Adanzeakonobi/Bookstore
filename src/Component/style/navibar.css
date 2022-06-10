@@ -1,0 +1,44 @@
+.navcont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* box-shadow: 3px 2px 2px rgb(0 0 0); */
+    /* margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px; */
+    padding: 1rem 4.188rem 1rem 4.25rem;
+  height: 3.94rem;
+  border-bottom: 1.5px solid gray;
+  }
+
+  .insideNav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  
+  .insideNav h2 {
+    font-size: 1.8rem;
+    color: var(--azure);
+  }
+
+  .nav-item {
+    color: var(--black);
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+  
+  .nav-item.active {
+    opacity: 1;
+  }
+  
+  .user-LogIn-icon {
+    cursor: pointer;
+    color: var(--azure);
+    border: 1px solid var(--grey-border);
+    border-radius: 50%;
+    padding: 12px;
+    margin-right: 20px;
+  }

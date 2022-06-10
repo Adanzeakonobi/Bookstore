@@ -1,24 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;600;700&display=swap');
+
 * {
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.navcont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid black;
-  box-shadow: 3px 2px 2px rgb(0 0 0);
-  margin-left: 10px;
-  margin-right: 10px;
-  padding-left: 10px;
+:root {
+  --black: #1e1e1e;
+  --black-one: #000;
+  --black-two: #121212;
+  --grey-border: #e8e8e8;
+  --cool-blue: #4386bf;
+  --pinkish-grey: #c7c7c7;
+  --pale-grey: #f5f6fa;
+  --pale-grey-two: #fafafa;
+  --warm-grey: #888;
+  --white: #fff;
+  --azure: #0290ff;
+  --very-light-pink: #c4c4c4;
+  --medium-blue: #307bbe;
+}
+
+.page-body {
+  min-height: 100vh;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: rgb(250, 251, 251);
 }
 
 .navList {
   list-style-type: none;
   text-decoration: none;
-  margin-right: 8%;
   display: flex;
-  gap: 20px;
+  gap: 18px;
+  list-style: none;
+  font-size: 22px;
 }
 
 .navList a {
@@ -29,47 +45,36 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  gap: 15px;
-  margin-bottom: 20px;
+  gap: 22px;
+  /* margin-bottom: 20px;
   padding-top: 45px;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 5px; */
 }
 
-.list-item {
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  gap: 150px;
-}
+/* display: flex;
+flex-direction: column;
+gap: 22px;
+list-style: none; */
 
-.list-item:nth-child(even) {
+/* .list-item:nth-child(even) {
   background-color: rgb(206, 206, 206);
 }
 
 .list-item:nth-child(odd) {
   background-color: rgb(235, 235, 235);
-}
+} */
 
-h2 {
+/* h2 {
   padding: 5px;
   border: 1px solid rgb(57, 57, 57);
-}
+} */
 
-h3 {
+/* h3 {
   padding: 5px;
-}
+} */
 
-.add-form {
-  display: flex;
-  gap: 150px;
-  margin-top: 15px;
-  align-items: flex-start;
-  padding: 12px;
-  border: 1px solid;
-}
-
-.footer {
+/* .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,4 +85,4 @@ h3 {
   bottom: 10px;
   left: 10px;
   right: 10px;
-}
+} */
