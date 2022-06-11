@@ -1,0 +1,30 @@
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 1.013rem;
+}
+
+.progressContainer h3 {
+  font-family: Montserrat, sans-serif;
+  font-size: 2rem;
+  color: var(--black-two);
+}
+
+.progressContainer img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.progressContainer p {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.875rem;
+  color: var(--black-two);
+}
+
+.percentageProgress {
+  display: flex;
+  flex-direction: column;
+  padding-right: 3.5rem;
+  border-right: 1px solid #e8e8e8;
+}
